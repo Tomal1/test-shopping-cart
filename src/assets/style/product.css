@@ -27,18 +27,12 @@
   display: flex;
 }
 
-#quanOfProduct span{
-  
-
-}
-
 
 #btnOfProduct, #toBasket{
   margin-top: 10px; 
   height: 25px;
   width: 60px;
   display: flex;
-
 }
 
 #toBasket{

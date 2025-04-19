@@ -1,19 +1,32 @@
 import "./assets/style/product.css"
 
+import { useState } from "react"
+
+
+
 
 const Product =() => {
+    const [value, setValue ] = useState(0);
+
+    const quan = (ans)=>{
+        ans == "+" ? setValue(value+1) : setValue(value -1); 
+    }
+
     return(
         <>
             <div id="Con">
                 <div id="imageOfProduct"></div>
                 <div id="quanOfProduct">
 
-                    <span>0</span>
+                    <span>{value}</span>
                 </div>
+
                 <div id="btnOfProduct">
-                    <button>+</button>
-                    <button>-</button>
+                    <button onClick={()=>quan("+")}>+</button>
+                    <button onClick={()=>quan("")}>-</button>
                 </div>
+
+
                 <div id="toBasket">
                     <button>Basket</button>
                 </div>
