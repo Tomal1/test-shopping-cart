@@ -7,6 +7,11 @@ const Product = () => {
     ans == "+" ? setValue(value + 1) : setValue(value - 1);
   };
 
+  const handleClick = () =>{
+    return navigate("");
+
+  }
+
   return (
     <>
       <div id="Con">
@@ -21,7 +26,7 @@ const Product = () => {
         </div>
 
         <div id="toBasket">
-          <button>Basket</button>
+          <button onClick={() => handleClick()}>Basket</button>
         </div>
       </div>
     </>
