@@ -1,13 +1,11 @@
-import React from "react"
+import React from "react";
 
-const Basket =()=>{
+const Basket = () => {
+  return (
+    <>
+      <h1>This is the Basket page</h1>
+    </>
+  );
+};
 
-    return(
-        <>
-        <h1>hello</h1>
-        </>
-    )
-}
-
-
-export default Basket
+export default Basket;

@@ -4,7 +4,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Product = () => {
-
   let navigate = useNavigate();
 
   const [value, setValue] = useState(0);
@@ -12,12 +11,11 @@ const Product = () => {
     ans == "+" ? setValue(value + 1) : setValue(value - 1);
   };
 
-  const handleClick = () =>{
+  const handleClick = () => {
     console.log("it is working");
-    
-    return navigate("");// your page will go hear
 
-  }
+    return navigate("/test-shopping-cart/basket"); // your page will go hear
+  };
 
   return (
     <>
