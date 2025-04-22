@@ -12,8 +12,6 @@ const Product = () => {
   };
 
   const handleClick = () => {
-    console.log("it is working");
-
     return navigate("/test-shopping-cart/basket"); // your page will go hear
   };
 
