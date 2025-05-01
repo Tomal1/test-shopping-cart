@@ -10,7 +10,7 @@ const Basket = () => {
   //  which can only loop through arrays
 
   useEffect(() => {
-    fetch("/api")
+    fetch("/api/basket")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
