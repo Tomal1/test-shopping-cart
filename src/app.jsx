@@ -14,13 +14,14 @@ const router = createBrowserRouter([
     errorElement: <NotFoundPage />,
   },
   {
-    path: "/test-shopping-cart/basket/",
+    path: "/test-shopping-cart/basket",
     element: <Basket />,
     errorElement: <NotFoundPage />,
   },
 ]);
 
 const App = () => {
+
   return (
     <>
       <RouterProvider router={router} />

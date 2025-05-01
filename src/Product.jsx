@@ -1,9 +1,15 @@
 import "./assets/style/product.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { useNavigate } from "react-router-dom";
 
+
+
 const Product = () => {
+
+
+
+
   let navigate = useNavigate();
 
   const [value, setValue] = useState(0);

@@ -1,12 +1,13 @@
 .basketCon {
   margin-top: 20px;
-  border: 1px solid black;
   display: flex;
+  flex-wrap: wrap;
   height: inherit;
-  width: 100%;
+  width: 800px;
 }
 
 .itemCon {
+  margin: 10px;
   display: flex;
   border: 1px solid black;
   width: 800px;
