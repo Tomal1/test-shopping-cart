@@ -29,7 +29,7 @@ const Product = () => {
     <>
       <div id="Con">
         {items.map((it) => (
-          <>
+          <div id="unit">
             <div id="imageOfProduct">{it.name}</div>
             <div id="quanOfProduct">
               <span>{value}</span>
@@ -39,7 +39,7 @@ const Product = () => {
               <button onClick={() => quan("+")}>+</button>
               <button onClick={() => quan("")}>-</button>
             </div>
-          </>
+          </div>
         ))}
         <div id="toBasket">
           <button onClick={() => handleClick()}>Basket</button>
