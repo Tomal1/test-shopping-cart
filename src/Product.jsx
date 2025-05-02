@@ -14,32 +14,33 @@ const Product = () => {
     return navigate("/test-shopping-cart/basket"); // your page will go hear
   };
 
+  const [items, setItems] = useState([]);
 
-    const [items, setItems] = useState([]); 
-
-  
-    useEffect(() => {
-      fetch("/api/product")
-        .then((res) => res.json())
-        .then((data) => {
-          console.log(data);
-          setItems(data);
-        });
-    }, []);
+  useEffect(() => {
+    fetch("/api/product")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setItems(data);
+      });
+  }, []);
 
   return (
     <>
       <div id="Con">
-        <div id="imageOfProduct"></div>
-        <div id="quanOfProduct">
-          <span>{value}</span>
-        </div>
+        {items.map((it) => (
+          <>
+            <div id="imageOfProduct">{it.name}</div>
+            <div id="quanOfProduct">
+              <span>{value}</span>
+            </div>
 
-        <div id="btnOfProduct">
-          <button onClick={() => quan("+")}>+</button>
-          <button onClick={() => quan("")}>-</button>
-        </div>
-
+            <div id="btnOfProduct">
+              <button onClick={() => quan("+")}>+</button>
+              <button onClick={() => quan("")}>-</button>
+            </div>
+          </>
+        ))}
         <div id="toBasket">
           <button onClick={() => handleClick()}>Basket</button>
         </div>
